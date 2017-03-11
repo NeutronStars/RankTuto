@@ -57,6 +57,6 @@ public final class PlayerListener implements Listener{
 	@EventHandler
 	private void playerChat(AsyncPlayerChatEvent pce){
 		RankList rankList = rank.getPlayerRank(pce.getPlayer());
-		pce.setFormat(rankList.getPrefix()+pce.getPlayer().getName()+rankList.getSuffix()+rankList.getChatSeparator()+pce.getMessage());
+		pce.setFormat(rankList.getPrefix()+pce.getPlayer().getName()+rankList.getSuffix()+rankList.getChatSeparator()+"%2$s");
 	}
 }
